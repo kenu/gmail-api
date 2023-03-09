@@ -35,4 +35,7 @@ app.use(function (err, req, res, next) {
   res.render('error')
 })
 
+const schedules = require('./schedule/cronjob')
+schedules.start()
+
 module.exports = app
